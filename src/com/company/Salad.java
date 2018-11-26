@@ -2,15 +2,15 @@ package com.company;
 
 public class Salad implements MenuItem{
     private String name;
-    private int price;
-    public Salad(String name, int price){
+    private double price;
+    public Salad(String name, double price){
         this.name=name;
         this.price=price;
     }
     public String getName(){
         return name;
     }
-    public int getPrice(){
+    public double getPrice(){
         return price;
     }
 }

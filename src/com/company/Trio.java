@@ -14,17 +14,12 @@ public class Trio implements MenuItem {
 
     }
     public double getPrice(){
-        if(sandwich.getPrice()>salad.getPrice()&& sandwich.getPrice()>drink.getPrice()){
-            if(salad.getPrice()>drink.getPrice()){
-                return sandwich.getPrice()+salad.getPrice();
-            }
-            else{
-                return sandwich.getPrice()+drink.getPrice();
-            }
-        }
-        if(salad.getPrice()>drink.getPrice()){
-            return salad.getPrice()+drink.getPrice();
-        }
-        return salad.getPrice()+drink.getPrice();
+       if(sandwich.getPrice()<salad.getPrice() && sandwich.getPrice()<drink.getPrice()){
+           return salad.getPrice()+drink.getPrice();
+       }
+       if(salad.getPrice()<sandwich.getPrice()&& salad.getPrice()<drink.getPrice()){
+           return sandwich.getPrice()+drink.getPrice();
+       }
+       return sandwich.getPrice()+salad.getPrice();
     }
 }
